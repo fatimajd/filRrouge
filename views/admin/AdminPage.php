@@ -13,12 +13,37 @@
 </head>
 <body>
 
-    <div class="content">
-        <h2>Sidebar Menu <br> Using HTML and CSS</h2>
-    </div>
+    
     <div class="open">
         <span class="fa fa-bars" onclick="openbar()"></span>
     </div>
+    <div class="content">
+                <h2>Bienvenue <br> Sur votre tableau de bord</h2>
+        <div class="d-flex justify-content-between mt-5">
+              
+            <div class="card border-warning mb-3" style="max-width: 18rem;">
+            <div class="card-header bg-transparent border-warning">
+                <img src="http://localhost/FileRouge/FileRouge/views/images/restaurantadmin.png" style="width: 58%;margin-left: 3rem;" alt="">
+                </div>
+            <div class="card-body text-warning">
+                <h5 class="card-title text-center">Vous avez</h5> <h1 class="card-title text-center"><?php echo $nmbr['number']?></h1>
+                <h5 class="card-title text-center"> Restaurants</h5>
+ 
+            </div>
+  
+        </div>
+        <div class="card border-warning mb-3" style="max-width: 18rem;">
+                    <div class="card-header bg-transparent border-warning">
+                        <img src="http://localhost/FileRouge/FileRouge/views/images/msg.png" style="width: 58%;margin-left: 3rem;" alt="">
+                        </div>
+                    <div class="card-body text-warning">
+                    <h5 class="card-title text-center">Vous avez</h5>
+                    <h1 class="card-title text-center"><?php echo $nmbrM['number']?></h1>
+                        <h5 class="card-title text-center"> Messages</h5>
+                        
+                    </div>   
+        </div>
+</div>
     <div class="sidebar" id="sidebar">
         <div class="close">
             <span class="fa fa-times" onclick="closebar()"></span>

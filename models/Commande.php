@@ -41,6 +41,13 @@ class Commande
         $query=$cnx->sql->query($requette);
         return $query->fetchAll();
     }
+    public static function countCommande(){
+        $cnx = new Connection;
+        $idR=$_SESSION['id'];
+        $requette="SELECT COUNT(*)as'number' FROM `commande`,`plats` WHERE commande.idP=plats.id AND  plats.idR=$idR";
+        $query=$cnx->sql->query($requette);
+        return $query->fetch();
+    }
    
    
         

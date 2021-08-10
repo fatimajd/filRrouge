@@ -165,9 +165,9 @@
                 <h6 class="card-title"  style="color:red;"><?php echo $best['prix'] ;?></h6>
                 <h6 class="card-title" style="text-decoration: line-through;"><?php echo $best['prixenc'] ;?></h6>
                 <p class="card-text">Some quick example text to build on the.</p>
-                <div class="icon-card d-flex">
-                    <a href="#" class="btn btn-info">Voir Plus</a>
-                    <a href="#" ><i class="fa fa-shopping-cart ms-5 fs-3"></i> </a>
+                <div class="icon-card d-flex justify-content-center">
+                <a href="http://localhost/FileRouge/FileRouge/Detail/index/<?=$best['id']?>">
+                <i class="fa fa-shopping-cart  fs-4"></i> </a>
                     <a href="#" ><i class="far fa-heart ms-5 fs-3"></i> </a>
 
                 </div>
@@ -195,10 +195,10 @@
                 <h6 class="card-title"  style="color:red;"><?php echo $heur['prix'] ;?></h6>
                 <h6 class="card-title" style="text-decoration: line-through;"><?php echo $heur['prixenc'] ;?></h6>
                 <p class="card-text">Some quick example text to build on the.</p>
-                <div class="icon-card d-flex">
-                    <a href="#" class="btn btn-info">Voir Plus</a>
-                    <a href="#" ><i class="fa fa-shopping-cart ms-5 fs-3"></i> </a>
-                    <a href="#" ><i class="far fa-heart ms-5 fs-3"></i> </a>
+                <div class="icon-card d-flex justify-content-center">
+                <a href="http://localhost/FileRouge/FileRouge/Detail/index/<?=$heur['id']?>">
+                <i class="fa fa-shopping-cart  fs-4"></i> </a>
+                <a href="#" ><i class="far fa-heart ms-5 fs-3"></i> </a>
 
                 </div>
             </div>

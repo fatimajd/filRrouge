@@ -14,7 +14,7 @@
 <body>
 
     <div class="content">
-    <h1 class="h1-admin text-center">OUR RESTAURANT</h1>
+    <h1 class="h1-admin text-center">Nos Messages</h1>
 		<div class="container">
            
              <!-- <div>

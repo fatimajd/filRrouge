@@ -12,13 +12,37 @@
     <title>Sidebar Menu</title>
 </head>
 <body>
-
-    <div class="content">
-        <h2>Sidebar Menu <br> Using HTML and CSS</h2>
-    </div>
+    
     <div class="open">
         <span class="fa fa-bars" onclick="openbar()"></span>
     </div>
+    <div class="content">
+                <h2>Bienvenue <br> Sur votre tableau de bord</h2>
+        <div class="d-flex justify-content-between mt-5">
+              
+            <div class="card border-warning mb-3" style="max-width: 18rem;">
+            <div class="card-header bg-transparent border-warning">
+                <img src="http://localhost/FileRouge/FileRouge/views/images/platadmin.png" style="width: 58%;margin-left: 3rem;" alt="">
+                </div>
+            <div class="card-body text-warning">
+                <h5 class="card-title text-center">Vous avez</h5> <h1 class="card-title text-center"><?php echo $nmbrP['number']?></h1>
+                <h5 class="card-title text-center"> Plats</h5>
+ 
+            </div>
+  
+        </div>
+        <div class="card border-warning mb-3" style="max-width: 18rem;">
+                    <div class="card-header bg-transparent border-warning">
+                        <img src="http://localhost/FileRouge/FileRouge/views/images/orderfood.png" style="width: 58%;margin-left: 3rem;" alt="">
+                        </div>
+                    <div class="card-body text-warning">
+                    <h5 class="card-title text-center">Vous avez</h5>
+                    <h1 class="card-title text-center"><?php echo $nmbrM['number']?></h1>
+                        <h5 class="card-title text-center"> Commandes</h5>
+                        
+                    </div>   
+        </div>
+</div>
     <div class="sidebar" id="sidebar">
         <div class="close">
             <span class="fa fa-times" onclick="closebar()"></span>
@@ -27,7 +51,7 @@
            Admin Page
         </div>
         <ul class="links">
-        <li><a href="http://localhost/FileRouge/FileRouge/Admin/index"><i class="fa fa-home"></i>Home </a></li>
+        <li><a href="http://localhost/FileRouge/FileRouge/Restaurant/accueil"><i class="fa fa-home"></i>Home </a></li>
             <li><a href="http://localhost/FileRouge/FileRouge/Plats/index"><i class="fa fa-qrcode"></i>Nos Plats</a></li>
             <li><a href="http://localhost/FileRouge/FileRouge/Commande/index"><i class="fa fa-user"></i>Nos Commandes</a></li>
            

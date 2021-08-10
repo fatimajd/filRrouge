@@ -74,7 +74,7 @@
            Admin Page
         </div>
         <ul class="links">
-        <li><a href="http://localhost/FileRouge/FileRouge/Admin/index"><i class="fa fa-home"></i>Home </a></li>
+        <li><a href="http://localhost/FileRouge/FileRouge/Restaurant/accueil"><i class="fa fa-home"></i>Home </a></li>
             <li><a href="http://localhost/FileRouge/FileRouge/Plats/index"><i class="fa fa-qrcode"></i>Nos Plats</a></li>
             <li><a href="http://localhost/FileRouge/FileRouge/Commande/index"><i class="fa fa-user"></i>Nos Commande</a></li>
            

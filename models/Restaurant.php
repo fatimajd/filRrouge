@@ -13,18 +13,20 @@ class Restaurant
     public $image;
     public $email;
     public $motdepasse;
+    public $role="restaurant";
     
 	static $table="restaurant";
 
     public function insert(){
 
      	$cnx = new Connection;
-     	$cnx->insert(self::$table,['nom','adresse','specialite','ville','image','email','motdepasse'],[$this->nom,
+     	$cnx->insert(self::$table,['nom','adresse','specialite','ville','image','role','email','motdepasse'],[$this->nom,
          $this->adresse,
          
          $this->specialite,
          $this->ville,
          $this->image,
+         $this->role,
          $this->email,
          $this->motdepasse]);
 

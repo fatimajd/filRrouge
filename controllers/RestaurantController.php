@@ -5,6 +5,7 @@
  */
 require_once 'models/Plats.php';
 require_once 'models/Restaurant.php';
+require_once 'models/Commande.php';
 class RestaurantController
 {
 	
@@ -15,8 +16,8 @@ class RestaurantController
 		}else{
 		$obj = new Plats;
 		$nmbrP=$obj->countPlats();
-		// $obj = new Commande;
-		// $nmbrM=$obj->countCommande();
+		$obj = new Commande;
+		$nmbrM=$obj->countCommande();
 		require_once 'views/restaurant/RestaurantPage.php';
 	}
 	}

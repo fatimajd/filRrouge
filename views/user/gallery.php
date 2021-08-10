@@ -126,7 +126,12 @@
                 </select>
                 
             </div>
-            
+           
+            <div class="price">
+                    <input type="text" class="prix" id="min" placeholder="Prix Min">
+                    <input type="text" class="prix" id="max" placeholder="Prix Max">
+                    <input type="button" value="search" onClick="trieparprix()" id="btn-search">
+                </div>
 
     </div>
             <div class="plats d-flex flex-wrap  justify-content-center" >
@@ -138,7 +143,7 @@
             <div class="card-body">
                 <h5 class="card-title" style="color:#F6AE2D;font-family:'Otomanopee One';"> <?php echo $plat['nom'] ;?></h5>
                 <h6 class="card-title"  style="color:red;" name="ville" id="ville"><?php echo $plat['ville'];?></h6>
-                <h6 class="card-title"  style="color:red;"><?php echo $plat['prix'] ;?></h6>
+                <h6 class="card-title"  style="color:red;" name="prix"><?php echo $plat['prix'] ;?></h6>
                 <h6 class="card-title" style="text-decoration: line-through;"><?php echo $plat['prixenc'] ;?></h6>
                 <p class="card-text">Some quick example text to build on the.</p>
                 <div class="icon-card d-flex justify-content-center">
@@ -199,6 +204,26 @@ function trieparville(){
         }
 
   }
+}
+            </script>
+            <script>
+                
+// ***************************************filtrage par prix*******************
+function trieparprix(){
+    var prixmin=document.getElementById("min").value;
+    var prixmax=document.getElementById("max").value;
+    var prixPlat=document.getElementsByName("prix");
+    var card=document.getElementsByName("card");
+  
+    for(var i=0;i<prixPlat.length;i++){
+
+        if (parseFloat(prixPlat[i].innerText) >= parseFloat(prixmin)  && parseFloat(prixPlat[i].innerText) <= parseFloat(prixmax) ){
+            card[i].style.display="block";
+
+        }else{
+            card[i].style.display="none";
+        }
+    }
 }
             </script>
        
