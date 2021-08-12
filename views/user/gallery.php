@@ -90,7 +90,11 @@
                 
                   
                     <div class="nav-panier">
+                    <?php if(isset($_SESSION['role'])){?>
                     <a href="http://localhost/FileRouge/FileRouge/Panier/index">
+                    <?php } else{ ?>
+                        <a href="http://localhost/FileRouge/FileRouge/Login/index">
+                        <?php } ?>
                       <i class="fa fa-shopping-cart ms-5 fs-3"></i> </a>
                       <?php if(isset($_SESSION['role'])){?>
                       <div class="num ms-2 mt-2">
@@ -149,7 +153,8 @@
                 <div class="icon-card d-flex justify-content-center">
                     
                     <a href="http://localhost/FileRouge/FileRouge/Detail/index/<?=$plat['id']?>"><i class="fa fa-shopping-cart  fs-4"></i> </a>
-                    <a href="#" ><i class="far fa-heart ms-5 fs-3"></i> </a>
+                    <a href="http://localhost/FileRouge/FileRouge/Gallery/adoration/<?=$plat['id']?>" ><i class="far fa-heart ms-5 fs-3"></i> </a>
+                    <?php echo $plat['nmbradoration'] ;?>
 
                 </div>
             </div>
@@ -160,6 +165,122 @@
 
        
 </div>
+ <!-- Footer -->
+ <footer class="back text-center text-lg-start bg-light text-white mt-5">
+  <!-- Section: Social media -->
+  <section class="d-flex justify-content-center justify-content-lg-around p-4 border-bottom">
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block">
+      <span>Nous avons dit « 99,9% de transparence », pas « 100% » 🙂</span>
+    </div>
+    <!-- Left -->
+
+    <!-- Right -->
+    <div>
+      
+      <a href="" class="me-4 text-reset ">
+        <i class="fab fa-instagram fs-3"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-linkedin fs-3"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-github fs-3"></i>
+      </a>
+    </div>
+    <!-- Right -->
+  </section>
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            <i class="fas fa-gem me-3"></i>
+          </h6>
+          <p>
+          <img src="http://localhost/FileRouge/FileRouge/views/images/logo15.png" alt="" style="width:152px;">
+
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Produits
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">PHP</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">MVC</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">HTML5</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Bootstrap</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+          LIENS UTILES
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Home</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Gallerie</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">About Nous</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Contact</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Contact
+          </h6>
+          <p><i class="fas fa-home me-3"></i> Casablanca, MR 10012</p>
+          <p>
+            <i class="fas fa-envelope me-3"></i>
+            info@example.com
+          </p>
+          <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+          <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2021 Copyright:
+    <a class="text-reset fw-bold" href="https://mdbootstrap.com/">Kitskos.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
             <script src="http://localhost/FileRouge/FileRouge/views/css/bootstrap.js">
             
             </script>

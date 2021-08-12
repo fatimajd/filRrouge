@@ -77,7 +77,7 @@ class Plats
 }
     public function bestseller(){
         $cnx = new Connection;
-        $requette="SELECT * FROM `plats` WHERE nmbrachat >=10";
+        $requette="SELECT * FROM `plats` WHERE nmbrachat >=10 ORDER BY nmbrachat DESC";
         $query=$cnx->sql->query($requette);
 		return $query;
     }
@@ -94,5 +94,25 @@ class Plats
         $query=$cnx->sql->query($requette);
         return $query->fetch();
     }
+    // public static function incrementer($id){
+    //     $cnx = new Connection;
+    //     $requette="UPDATE `plats` SET nmbrachat=nmbrachat+1 WHERE id=$id";
+    //     $query=$cnx->sql->query($requette);
+    //     return $query->fetch();
+    // }
+     public function nmbrachat($id ,$quantite){
+    $cnx = new Connection;
+    $requette="UPDATE `plats` SET nmbrachat=nmbrachat+$quantite WHERE id=$id";
+    $query=$cnx->sql->query($requette);
+    return $query;
+}
+public function adoration($id){
+    $cnx = new Connection;
+    $requette="UPDATE `plats` SET nmbradoration=nmbradoration+1 WHERE id=$id";
+    $query=$cnx->sql->query($requette);
+    return $query;
+}
+
+
   
 }

@@ -22,12 +22,7 @@ class Details
        
      	$cnx->insert(self::$table,['idP','idC','quantite'],[$idP,$idC,$this->quantite]);
  }
-//  public function nmbrachat($id){
-//     $cnx = new Connection;
-//     $requette="UPDATE `plats` SET nmbrachat=nmbrachat+1 WHERE id=$id";
-//     $query=$cnx->sql->query($requette);
-//     return $query;
-// }
+
  public function countpanier(){
     $cnx = new Connection;
     $idC=$_SESSION['id'];

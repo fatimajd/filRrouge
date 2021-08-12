@@ -24,8 +24,8 @@
             <table class="table">
                 <thead>
                   <tr>
-                    <th scope="col">id</th>
-                    <th scope="col">Nom</th>
+                    
+                    <th scope="col">Email</th>
                     <th scope="col">sujet</th>
                     <th scope="col">Message</th>
                     
@@ -39,7 +39,7 @@
 		foreach($messages as $msg):?>
                   <tr>
                     
-                    <td><?php echo $msg['id'] ;?></td>
+                   
                     <td><?php echo $msg['nom'] ;?></td>
                     <td><?php echo $msg['sujet'] ;?></td>
                     <td><?php echo $msg['message'] ;?></td>

@@ -27,6 +27,7 @@ class RestaurantController
 	    $restaurants=$obj->getAll();
 		require_once 'views/admin/NosRestaurant.php';
 	}
+
 	public function save(){
 
 		$obj = new Restaurant;

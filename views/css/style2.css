@@ -413,6 +413,7 @@ table{
     background-color: #111;
     opacity: 0.9;
     overflow-x: hidden;
+    overflow-y: hidden;
     padding-top: 6rem;
     transition: 1s;
     padding-bottom: 2rem; 
@@ -556,10 +557,13 @@ table{
     background-image: url('http://localhost/FileRouge/FileRouge/views/images/res6.png');
   }
 /* ****************footer********** */
-
+.back{
+  background: linear-gradient(to bottom, #F6AE2D 0%, #000000 100%);
+}
 /* ***********contact********* */
 
 * {
+  
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -585,7 +589,7 @@ table{
 }
 
 .content {
-    position: fixed;
+   
     top: 60px;
     height: calc(100vh - 60px);
     width: 100vw;
@@ -1408,4 +1412,102 @@ height:441px;
     margin-top:5rem;
     /* position: fixed; */
     
+}
+/* responsive */
+@media only screen and (max-width: 700px) and (min-width: 400px) {
+  .home-pic{
+ display: none;
+  }
+  .home-par{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:80%;
+    margin-top:0rem;
+  }
+  .home-par h1{
+    font-size: 3rem;
+  }
+  .imgblack{
+    width:359px;
+  
+
+  }
+  .i1{
+    width: 287px;
+    margin-left: 1rem;
+    margin-top: 0rem;
+}
+  .vh-100 {
+    height: 73vh !important;
+}
+  
+}
+@media only screen and (max-width: 900px) and (min-width: 700px) {
+  .home-pic{
+ display: block;
+ width: 50%;
+  }
+  .home-par{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:0rem;
+  }
+  .home-par h1{
+    font-size: 3rem;
+  }
+  
+  .home-pic .img{
+    width: 60rem;
+    margin-top: 19vh;
+    margin-left: -15rem;
+  }
+  .home-pic .img1{
+    width: 10rem;
+      margin-top: -39rem;
+      margin-left: 10vw;
+      animation: rotation 53s linear infinite;
+  }
+  
+  .home-pic .img2{
+    width: 6rem;
+    margin-top: -53vh;
+    
+  }
+  
+}
+@media only screen and (max-width: 1000px) and (min-width: 900px) {
+  .home-pic{
+ display: block;
+ width: 50%;
+  }
+  .home-par{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:0rem;
+  }
+  .home-par h1{
+    font-size: 3rem;
+  }
+  
+  .home-pic .img{
+    width: 60rem;
+    margin-top: 19vh;
+    margin-left: -15rem;
+  }
+  .home-pic .img1{
+    width: 10rem;
+      margin-top: -39rem;
+      margin-left: 10vw;
+      animation: rotation 53s linear infinite;
+  }
+  
+  .home-pic .img2{
+    width: 6rem;
+    margin-top: -53vh;
+    
+  }
+  
 }

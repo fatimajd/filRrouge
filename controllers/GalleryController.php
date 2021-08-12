@@ -16,6 +16,7 @@ class GalleryController
 	    $plats=$obj->gallery();
 		$obj = new Restaurant;
 		$restaurants=$obj->getAll();
+	
 		if(isset($_SESSION['role'])){
 		$obj = new Details;
 		$nmbr=$obj->countpanier();	
@@ -31,4 +32,9 @@ class GalleryController
 	// 	return $countt('count');
 	  
 	// }
+	function adoration($id){
+		$obj = new Plats;
+	    $adoration=$obj->adoration($id);
+		header('Location:http://localhost/FileRouge/FileRouge/Gallery/index');
+	}
 }

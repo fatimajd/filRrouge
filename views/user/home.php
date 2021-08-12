@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="http://localhost/FileRouge/FileRouge/views/css/bootstrap.css">
     <link href="http://localhost/FileRouge/FileRouge/views/css/style2.css" rel="stylesheet">
     <script src="https://use.fontawesome.com/b9f85c081e.js"></script>
+
+ 
     <title>Document</title>
 </head>
 
@@ -89,7 +91,11 @@
                     
                     <?php } ?>                        
                             <div class="nav-panier">
+                            <?php if(isset($_SESSION['role'])){?>
                             <a href="http://localhost/FileRouge/FileRouge/Panier/index">
+                            <?php } else{ ?>
+                        <a href="http://localhost/FileRouge/FileRouge/Login/index">
+                        <?php } ?>
                             <i class="fa fa-shopping-cart ms-5 fs-3"></i> </a>
                             <?php if(isset($_SESSION['role'])){?>
                             <div class="num ms-2 mt-2"><?php echo $nmbr['number'];?></div><?php } ?>
@@ -120,40 +126,60 @@
 
 </div>
 
-<div class="restaurant" style="height:100vh;">
+<div class="restaurant">
 
 
     <div class="rest-par mt-5 ms-5">
 
         <h1>Nos Restaurants<h1>
-        
-    </div>
-        
-    <div class="swiper-container">
             
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div class="container-general">
-            <div class="gallery-wrap wrap-effect-1">
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-            </div>
-            </div>
-            </div>
-        </div>
-
-    </div>
-
-    
 </div>
+<div class="d-flex justify-content-center">
+<div id="carouselExampleCaptions" class="carousel slide" style="width:50%;
+    margin-top: 4rem;" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="http://localhost/FileRouge/FileRouge/views/images/res11.jfif"  style="height:500px;" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>First slide label</h5>
+        <p>Some representative placeholder content for the first slide.</p>
+      </div>
+    </div>
+    <?php  foreach($restaurant as $res):?>
+    <div class="carousel-item">
+      <img src="http://localhost/FileRouge/FileRouge/views/images/<?php echo $res['image'] ;?>" style="height:500px;" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5><?php echo $res['nom'] ;?></h5>
+        <p>Some representative placeholder content for the second slide.</p>
+      </div>
+    </div>
+    <?php endforeach; ?>
+    
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+    </div>
 <div class="rest-par mt-5 ms-5" id="bestseller">
 
         <h1 style="margin-top: 10rem;">Best seller<h1>
         
     </div>
+    </div>
+  
+
+
 <div class="plats d-flex flex-wrap  justify-content-center" >
 <?php 
             foreach($bestseller as $best):?>
@@ -168,7 +194,8 @@
                 <div class="icon-card d-flex justify-content-center">
                 <a href="http://localhost/FileRouge/FileRouge/Detail/index/<?=$best['id']?>">
                 <i class="fa fa-shopping-cart  fs-4"></i> </a>
-                    <a href="#" ><i class="far fa-heart ms-5 fs-3"></i> </a>
+                    <a href="http://localhost/FileRouge/FileRouge/Plats/adoration/<?=$best['id']?>" ><i class="far fa-heart ms-5 fs-3"></i> </a>
+                    <?php echo $best['nmbradoration'] ;?>
 
                 </div>
             </div>
@@ -184,12 +211,12 @@
         <h1 style="margin-top: 10rem;">Plats de dernière heure<h1>
         
     </div>
-    <div class="plats d-flex flex-wrap overflow-scroll justify-content-center" >
+    <div class="plats d-flex flex-wrap justify-content-center" >
 <?php 
             foreach($dheure as $heur):?>
 
         <div class="card" style="width: 20rem; height: auto;">
-            <img id="img-top" class="card-img-top" style="height:15rem;" src="http://localhost/FileRouge/FileRouge/views/images/<?php echo $best['image'] ;?>" alt="Card image cap">
+            <img id="img-top" class="card-img-top" style="height:15rem;" src="http://localhost/FileRouge/FileRouge/views/images/<?php echo $heur['image'] ;?>" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title" style="color:#F6AE2D;font-family:'Otomanopee One';"> <?php echo $heur['nom'] ;?></h5>
                 <h6 class="card-title"  style="color:red;"><?php echo $heur['prix'] ;?></h6>
@@ -198,7 +225,8 @@
                 <div class="icon-card d-flex justify-content-center">
                 <a href="http://localhost/FileRouge/FileRouge/Detail/index/<?=$heur['id']?>">
                 <i class="fa fa-shopping-cart  fs-4"></i> </a>
-                <a href="#" ><i class="far fa-heart ms-5 fs-3"></i> </a>
+                <a href="http://localhost/FileRouge/FileRouge/Plats/adoration/<?=$heur['id']?>" ><i class="far fa-heart ms-5 fs-3"></i> </a>
+                <?php echo $heur['nmbradoration'] ;?>
 
                 </div>
             </div>
@@ -214,217 +242,124 @@
 
 
 
+  
+    <!-- Footer -->
+<footer class="back text-center text-lg-start bg-light text-white mt-5">
+  <!-- Section: Social media -->
+  <section class="d-flex justify-content-center justify-content-lg-around p-4 border-bottom">
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block">
+      <span>Nous avons dit « 99,9% de transparence », pas « 100% » 🙂</span>
+    </div>
+    <!-- Left -->
 
+    <!-- Right -->
+    <div>
+      
+      <a href="" class="me-4 text-reset ">
+        <i class="fab fa-instagram fs-3"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-linkedin fs-3"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-github fs-3"></i>
+      </a>
+    </div>
+    <!-- Right -->
+  </section>
+  <!-- Section: Social media -->
 
-<!--                
-    <div class="container-fluid h-100vh">
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            <i class="fas fa-gem me-3"></i>
+          </h6>
+          <p>
+          <img src="http://localhost/FileRouge/FileRouge/views/images/logo15.png" alt="" style="width:152px;">
 
-        <div>
-            <img src="http://localhost/FileRouge/FileRouge/views/images/logo15.png" alt="" class="logo">
+          </p>
         </div>
-        <div class="container-fluid h-100vh d-flex">
-            <div class="w-10 position-absolute">
-                <img src="http://localhost/FileRouge/FileRouge/views/images/modern-shapes-bg.png" class="w-100" alt="">
-            </div>
-                <div class="left-side mx-5">
-                    
-                    <div class="parag">
-                        <h1>Best quality and ecological products from Morocco</h1>
-                        <p>YOUR VIRTUAL MARKET FOOD IN MOROCCO</p>
-                    </div>
+        <!-- Grid column -->
 
-                    <div class="btn-home">
-                        <button class="btn2"> Shop</button></a>
-                        <button class="btn2">Best Selling</button>
-                    </div>
-                    <div class="plat5">
-                        <img src="http://localhost/FileRouge/FileRouge/views/images/home-pic-1.png" alt="" class="pic5">
-                    </div>
-                   
-                </div>
-                
-                    
-                     <div class="right-side">
-                        <div class="rect">
-                            <div class="dot"></div>
-                            <p> Open, Close at 00:00 </p>
-                        </div>
-                        <div class="plat">
-                            <img src="http://localhost/FileRouge/FileRouge/views/images/ho.png" alt="" class="pic1">
-                            
-                        </div>
-                        <div class="plat3">
-                            
-                            <img src="http://localhost/FileRouge/FileRouge/views/images/hom.png" alt="" class="pic3">
-                        </div>
-                        
-                        <div class="para">
-                            <h2>Who we are !</h2>
-                            <p>We're Creating A Timeless Experience For Better Lifestyle For us, cooking in a green
-                                and transparent way means making you taste the best of nature while awakening your
-                                environmental awareness. So that we can all eat ethically one day, our mission is
-                                to be part of the solution.
-                            </p>
-                        </div>
-                    </div>
-                
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Produits
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">PHP</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">MVC</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">HTML5</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Bootstrap</a>
+          </p>
+        </div>
+        <!-- Grid column -->
 
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+          LIENS UTILES
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Home</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Gallerie</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">About Nous</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Contact</a>
+          </p>
         </div>
-        <div class="swiper-container">
-            
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <div class="container-general">
-            <h2>Our restaurant</h2>
-          <div class="gallery-wrap wrap-effect-1">
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-          </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Contact
+          </h6>
+          <p><i class="fas fa-home me-3"></i> Casablanca, MR 10012</p>
+          <p>
+            <i class="fas fa-envelope me-3"></i>
+            info@example.com
+          </p>
+          <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+          <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
         </div>
+        <!-- Grid column -->
       </div>
+      <!-- Grid row -->
     </div>
-  </div> -->
-  <!-- <footer>
-    <svg viewBox="0 -20 700 110" width="100%" height="110" preserveAspectRatio="none">
-      <path transform="translate(0, -20)" d="M0,10 c80,-22 240,0 350,18 c90,17 260,7.5 350,-20 v50 h-700" fill="#CEB964" />
-      <path d="M0,10 c80,-18 230,-12 350,7 c80,13 260,17 350,-5 v100 h-700z" fill="#E6E7E9" />
-    </svg>
-  </footer> -->
-        <!-- <div class="gallery-container">
-            <div class="gallery-picture">
-                    <div class="thumb">
-                            <a target="_blank" href="http://imelgrat.me" class="pic11">
-                                    <span>3D - Picture 1</span> </a>
-                    </div>
-            </div>
-            <div class="gallery-picture">
-                    <div class="thumb">
-                            <a target="_blank" href="https://imelgrat.me" class="pic22">
-                                    <span>3D - Picture 2</span> </a>
-                    </div>
-            </div>
-            <div class="gallery-picture">
-                    <div class="thumb">
-                            <a target="_blank" href="https://imelgrat.me" class="pic33">
-                                    <span>3D - Picture 3</span> </a>
-                    </div>
-            </div>
-            <div class="gallery-picture">
-                    <div class="thumb">
-                            <a target="_blank" href="https://imelgrat.me" class="pic44">
-                                    <span>3D - Picture 4</span> </a>
-                    </div>
-            </div>
-            
-    </div> -->
-        <!-- <div class="imgg1">
-            <img src="images/P5.png" alt="" class="image1">
-        </div> -->
+  </section>
+  <!-- Section: Links  -->
 
-        <!-- <div class="trusted">
-            <p>Trusted By</p>
-            <div class="container">
-                <div>
-                    <img src="images/yc-logo.png">
-                </div>
-            </div>
-        </div>
-    </div>
-    
-<-- ******************* section two***** -->
-
-        <!-- <div class="container-fluid d-flex section-two">
-            <div class="salmon-pic">
-                <div>
-                    <img src="images/home-pic-1.png" alt="" class="pic5">
-                </div>
-                
-            </div>
-
-            <div class="para">
-                <p>We're Creating A Timeless Experience For Better Lifestyle For us, cooking in a green
-                    and transparent way means making you taste the best of nature while awakening your
-                    environmental awareness. So that we can all eat ethically one day, our mission is
-                    to be part of the solution.
-                </p>
-            </div>
-    </div> -->
-
-
-        <!-- <footer class="container-fluid footer">
-        <div>
-            <div class="content">
-
-                <div class="container-fluid">
-
-                    <h3>Wir haben gesagt “99,9% Transparenz”, nicht “100%” 🙂</h3>
-
-                    <div>
-                        <i class="fab fa-facebook-square"></i>
-                        <i class="fab fa-instagram"></i>
-                    </div>
-
-                </div>
-
-                <hr>
-
-                <div class="d-content">
-
-                    <div class="d">
-                        <ul class="z">
-                            <li>
-                                <h3>pages</h3>
-                            </li>
-                            <li><a>SHOP</a></li>
-                            <li><a>CART</a></li>
-                            <li><a>CHECKOUT</a></li>
-                            <li> <a>MYACCOUNT</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="d">
-                        <ul class="z">
-                            <li>
-                                <h3>pages</h3>
-                            </li>
-                            <li><a>SHOP</a></li>
-                            <li><a>CART</a></li>
-                            <li><a>CHECKOUT</a></li>
-                            <li><a>MYACCOUNT</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="d">
-                        <ul class="z">
-                            <li>
-                                <h3>pages</h3>
-                            </li>
-                            <li><a>SHOP</a></li>
-                            <li><a>CART</a></li>
-                            <li><a>CHECKOUT</a></li>
-                            <li><a>MYACCOUNT</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-            <hr class="ligne">
-            <div class="payment">
-                <i class="fab fa-cc-visa"></i>
-                <i class="fab fa-cc-paypal"></i>
-                <i class="fab fa-cc-mastercard"></i>
-                <i class="fab fa-cc-stripe"></i>
-            </div>
-            <div class="copyrate">
-                <p>© 2020 Superfood Gin | Fabian Hintzen & Company | REMJND Werbeagentur</p>
-            </div>
-        </div>
-
-    </footer> -->
-
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2021 Copyright:
+    <a class="text-reset fw-bold" href="https://mdbootstrap.com/">Kitskos.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
         <script src="/views/css/bootstrap.js"></script>
         <script>
             var anchor = document.querySelector(".open")

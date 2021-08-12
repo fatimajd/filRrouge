@@ -48,7 +48,7 @@
             <span class="fa fa-times" onclick="closebar()"></span>
         </div>
         <div class="title">
-           Admin Page
+           Restaurant Page
         </div>
         <ul class="links">
         <li><a href="http://localhost/FileRouge/FileRouge/Restaurant/accueil"><i class="fa fa-home"></i>Home </a></li>

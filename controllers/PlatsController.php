@@ -52,6 +52,10 @@ class PlatsController
 		$obj->deleteone($id);
 		header("location:http://localhost/FileRouge/FileRouge/Plats/index");
 	}
-	
+	function adoration($id){
+		$obj = new Plats;
+	    $adoration=$obj->adoration($id);
+		header("location:http://localhost/FileRouge/FileRouge/");
+	}
 
 }

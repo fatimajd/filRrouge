@@ -23,7 +23,7 @@ class CommandeController
             $i=0;
             while(isset($_POST['quantite'.$i]) && !empty($_POST['quantite'.$i]))
             {
-         
+          
             $commande->idP=$_POST['id'.$i];
             $commande->quantite=$_POST['quantite'.$i];
             $commande->prixtotal=$_POST['prixtotal'];
@@ -31,8 +31,14 @@ class CommandeController
             $date = date('Y-m-d H:i:s');
             $commande->date=$date;
             $commande->insert();
+            $plats = new Plats;
+            $id=$_POST['id'.$i];
+            $quantite=$_POST['quantite'.$i];
+            $plats->nmbrachat($id ,$quantite);
             $i++;
             }
+           
+
       
         header('location:http://localhost/FileRouge/FileRouge/Detail/deleteAll');
 

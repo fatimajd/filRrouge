@@ -76,7 +76,11 @@
                     <a href="http://localhost/FileRouge/FileRouge/Login/index"><i class="fa fa-user fs-3" aria-hidden="true"></i></a>
                   
                     <div class="nav-panier">
+                    <?php if(isset($_SESSION['role'])){?>
                     <a href="http://localhost/FileRouge/FileRouge/Panier/index">
+                    <?php } else{ ?>
+                        <a href="http://localhost/FileRouge/FileRouge/Login/index">
+                        <?php } ?>
                       <i class="fa fa-shopping-cart ms-5 fs-3"></i> </a>
                       <?php if(isset($_SESSION['role'])){?>
                       <div class="num ms-2 mt-2">0</div><?php } ?>
