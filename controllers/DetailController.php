@@ -49,4 +49,12 @@ class DetailController
 	
 		header("location:http://localhost/FileRouge/FileRouge/Panier/index");
 	}
+	public function update($id){
+	 	
+		$obj = new Details;
+		$obj->quantite = $_POST["qtt"];
+	
+		$obj->updateone($id);
+		header("location:http://localhost/FileRouge/FileRouge/Panier/index");
+	}
 }

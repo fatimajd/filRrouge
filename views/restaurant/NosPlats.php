@@ -49,7 +49,7 @@
                                   <input type="file" class="form-control" id="message-text" name="image">
                                   <label for="message-text" class="col-form-label">Prix</label>
                                   <input type="text" class="form-control" id="message-text" name="prix">
-                                  <label for="message-text" class="col-form-label">Encienne prix </label>
+                                  <label for="message-text" class="col-form-label">ancien prix </label>
                                   <input type="number" class="form-control" id="message-text" name="prixenc">
                                   <label for="message-text" class="col-form-label">Nombre des plats</label>
                                   <input type="number" class="form-control" id="message-text" name="nmbrplats">

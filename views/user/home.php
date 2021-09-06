@@ -49,29 +49,19 @@
                             <div id="side-menu" class="side-nav">
                                 <a href="#" class="btn-close btn-close-white"></a>
                                 <a href="http://localhost/FileRouge/FileRouge/" class="menu__link menu__link--active">Home
-                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 152.9 43.4" style="enable-background:new 0 0 152.9 43.4;" xml:space="preserve">
-                                        <path d="M151.9,13.6c0,0,3.3-9.5-85-8.3c-97,1.3-58.3,29-58.3,29s9.7,8.1,69.7,8.1c68.3,0,69.3-23.1,69.3-23.1 s1.7-10.5-14.7-18.4"/>
-                                    </svg>
+                                    
                                 </a>
-                                <a href="http://localhost/FileRouge/FileRouge/Gallery/index" class="menu__link">Gallery
-                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 152.9 43.4" style="enable-background:new 0 0 152.9 43.4;" xml:space="preserve">
-                                        <path d="M151.9,13.6c0,0,3.3-9.5-85-8.3c-97,1.3-58.3,29-58.3,29s9.7,8.1,69.7,8.1c68.3,0,69.3-23.1,69.3-23.1 s1.7-10.5-14.7-18.4"/>
-                                    </svg>
+                                <a href="http://localhost/FileRouge/FileRouge/Gallery/index" class="menu__link">Nos Plats
+                                  
                                 </a>
-                                <a href="http://localhost/FileRouge/FileRouge/about/index" class="menu__link">About Us
-                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 152.9 43.4" style="enable-background:new 0 0 152.9 43.4;" xml:space="preserve">
-                                        <path d="M151.9,13.6c0,0,3.3-9.5-85-8.3c-97,1.3-58.3,29-58.3,29s9.7,8.1,69.7,8.1c68.3,0,69.3-23.1,69.3-23.1 s1.7-10.5-14.7-18.4"/>
-                                    </svg>
+                                <a href="http://localhost/FileRouge/FileRouge/about/index" class="menu__link">About Nous
+                                   
                                 </a>
-                                <a href="#" class="menu__link">Order
-                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 152.9 43.4" style="enable-background:new 0 0 152.9 43.4;" xml:space="preserve">
-                                        <path d="M151.9,13.6c0,0,3.3-9.5-85-8.3c-97,1.3-58.3,29-58.3,29s9.7,8.1,69.7,8.1c68.3,0,69.3-23.1,69.3-23.1 s1.7-10.5-14.7-18.4"/>
-                                    </svg>
+                                <a href="http://localhost/FileRouge/FileRouge/Profile/index"  class="menu__link">Profile
+                                    
                                 </a>
                                 <a href="http://localhost/FileRouge/FileRouge/Contact/index" class="menu__link">Contact
-                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 152.9 43.4" style="enable-background:new 0 0 152.9 43.4;" xml:space="preserve">
-                                        <path d="M151.9,13.6c0,0,3.3-9.5-85-8.3c-97,1.3-58.3,29-58.3,29s9.7,8.1,69.7,8.1c68.3,0,69.3-23.1,69.3-23.1 s1.7-10.5-14.7-18.4"/>
-                                    </svg>
+                                   
                                 </a>
                             </div>
                         </header>
@@ -111,8 +101,8 @@
 
     <div class="home-par mt-5 text-center ms-5" >
 
-        <h1>Best quality and ecological products from Morocco <h1>
-        <h2>your virtual market food in morocco <h2>
+        <h1>Meilleure qualité et produits écologiques du Maroc <h1>
+        <h2>Votre marché alimentaire virtuel au Maroc<h2>
             <a href="#bestseller"> 
         <button type="button" class="btn btn-light btn-lg" style="margin-top:8vh;"> Best Sellers</button></a>
     </div>
@@ -188,9 +178,9 @@
             <img id="img-top" class="card-img-top" style="height:15rem;" src="http://localhost/FileRouge/FileRouge/views/images/<?php echo $best['image'] ;?>" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title" style="color:#F6AE2D;font-family:'Otomanopee One';"> <?php echo $best['nom'] ;?></h5>
-                <h6 class="card-title"  style="color:red;"><?php echo $best['prix'] ;?></h6>
-                <h6 class="card-title" style="text-decoration: line-through;"><?php echo $best['prixenc'] ;?></h6>
-                <p class="card-text">Some quick example text to build on the.</p>
+                <h6 class="card-title"  style="color:red;"><?php echo $best['prix'].'DH' ;?></h6>
+                <h6 class="card-title" style="text-decoration: line-through;"><?php echo $best['prixenc']."dh" ;?></h6>
+                <p class="card-text">Sauce tomate, mozzarella fleur de lait.</p>
                 <div class="icon-card d-flex justify-content-center">
                 <a href="http://localhost/FileRouge/FileRouge/Detail/index/<?=$best['id']?>">
                 <i class="fa fa-shopping-cart  fs-4"></i> </a>
@@ -220,8 +210,8 @@
             <div class="card-body">
                 <h5 class="card-title" style="color:#F6AE2D;font-family:'Otomanopee One';"> <?php echo $heur['nom'] ;?></h5>
                 <h6 class="card-title"  style="color:red;"><?php echo $heur['prix'] ;?></h6>
-                <h6 class="card-title" style="text-decoration: line-through;"><?php echo $heur['prixenc'] ;?></h6>
-                <p class="card-text">Some quick example text to build on the.</p>
+                <h6 class="card-title" style="text-decoration: line-through;"><?php echo $heur['prixenc']."dh" ;?></h6>
+                <p class="card-text">Sauce tomate, mozzarella fleur de lait.</p>
                 <div class="icon-card d-flex justify-content-center">
                 <a href="http://localhost/FileRouge/FileRouge/Detail/index/<?=$heur['id']?>">
                 <i class="fa fa-shopping-cart  fs-4"></i> </a>

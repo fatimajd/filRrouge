@@ -49,4 +49,8 @@ public static function delete(){
     $query=$cnx->sql->query($requette);
     return $query;
 }
+public function updateone($id){
+    $cnx = new Connection;
+    $cnx->update(self::$table,['quantite'],[$this->quantite],$id);
+}
 }

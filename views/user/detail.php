@@ -46,29 +46,19 @@
                             <div id="side-menu" class="side-nav">
                                 <a href="#" class="btn-close btn-close-white"></a>
                                 <a href="http://localhost/FileRouge/FileRouge/" class="menu__link menu__link--active">Home
-                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 152.9 43.4" style="enable-background:new 0 0 152.9 43.4;" xml:space="preserve">
-                                        <path d="M151.9,13.6c0,0,3.3-9.5-85-8.3c-97,1.3-58.3,29-58.3,29s9.7,8.1,69.7,8.1c68.3,0,69.3-23.1,69.3-23.1 s1.7-10.5-14.7-18.4"/>
-                                    </svg>
+                                   
                                 </a>
-                                <a href="http://localhost/FileRouge/FileRouge/Gallery/index" class="menu__link">Gallery
-                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 152.9 43.4" style="enable-background:new 0 0 152.9 43.4;" xml:space="preserve">
-                                        <path d="M151.9,13.6c0,0,3.3-9.5-85-8.3c-97,1.3-58.3,29-58.3,29s9.7,8.1,69.7,8.1c68.3,0,69.3-23.1,69.3-23.1 s1.7-10.5-14.7-18.4"/>
-                                    </svg>
+                                <a href="http://localhost/FileRouge/FileRouge/Gallery/index" class="menu__link">Nos Plats
+                                   
                                 </a>
-                                <a href="http://localhost/FileRouge/FileRouge/about/index" class="menu__link">About Us
-                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 152.9 43.4" style="enable-background:new 0 0 152.9 43.4;" xml:space="preserve">
-                                        <path d="M151.9,13.6c0,0,3.3-9.5-85-8.3c-97,1.3-58.3,29-58.3,29s9.7,8.1,69.7,8.1c68.3,0,69.3-23.1,69.3-23.1 s1.7-10.5-14.7-18.4"/>
-                                    </svg>
+                                <a href="http://localhost/FileRouge/FileRouge/about/index" class="menu__link">About Nous
+                                   
                                 </a>
-                                <a href="#" class="menu__link">Order
-                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 152.9 43.4" style="enable-background:new 0 0 152.9 43.4;" xml:space="preserve">
-                                        <path d="M151.9,13.6c0,0,3.3-9.5-85-8.3c-97,1.3-58.3,29-58.3,29s9.7,8.1,69.7,8.1c68.3,0,69.3-23.1,69.3-23.1 s1.7-10.5-14.7-18.4"/>
-                                    </svg>
+                                <a href="http://localhost/FileRouge/FileRouge/Profile/index"  class="menu__link">Profile
+                                    
                                 </a>
                                 <a href="http://localhost/FileRouge/FileRouge/Contact/index" class="menu__link">Contact
-                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 152.9 43.4" style="enable-background:new 0 0 152.9 43.4;" xml:space="preserve">
-                                        <path d="M151.9,13.6c0,0,3.3-9.5-85-8.3c-97,1.3-58.3,29-58.3,29s9.7,8.1,69.7,8.1c68.3,0,69.3-23.1,69.3-23.1 s1.7-10.5-14.7-18.4"/>
-                                    </svg>
+                                    
                                 </a>
                             </div>
                         </header>
@@ -114,7 +104,7 @@
                 <h3> Prix :<?php echo $plat['prix'].'DH' ;?></h3>
                 <h3 style="text-decoration: line-through;"><?php echo $plat['prixenc'].'DH' ;?></h3>
                 <label for="">Quantité </label>
-                <input type="number" name="quantite" class="inputdetail mb-4">
+                <input type="number" min="1" name="quantite" class="inputdetail mb-4">
 
                 <div class="bttn d-flex justify-content-between">
                     <button type="button" class="btn btn-primary mb-4 ml-3 " style="background-color:#F6AE2D;border:none;font-family:'Otomanopee One';"
@@ -126,11 +116,11 @@
                         <div class="modal-dialog">
                           <div class="modal-content">
                             <div class="modal-header">
-                              <h6>Un nouvel article a été ajouté à votre panier. Vous avez maintenant 4 articles dans votre panier.</h6>
+                              <h6>Un nouvel article a été ajouté à votre panier.</h6>
                               
                             </div>
                             <div class="modal-body">
-                              <span class="bb-form-title p-b-26"> Welcome </span> <span class="bb-form-title p-b-48"> 
+                              <span class="bb-form-title p-b-26">Bienvenue </span> <span class="bb-form-title p-b-48"> 
                                 <i class="mdi mdi-symfony"></i> </span>
 
                                 <div class="bttns d-flex justify-content-between mb-3">

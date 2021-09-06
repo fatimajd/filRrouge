@@ -14,7 +14,7 @@
 <body>
 
     <div class="content">
-    <h1 class="h1-admin text-center">OUR RESTAURANT</h1>
+    <h1 class="h1-admin text-center">NOS RESTAURANTS</h1>
 		<div class="container">
            
              <!-- <div>
@@ -28,12 +28,12 @@
                         <div class="modal-dialog">
                           <div class="modal-content">
                             <div class="modal-header">
-                              <h5 class="newplat modal-title" id="exampleModalLabel">New Restaurant</h5>
+                              <h5 class="newplat modal-title" id="exampleModalLabel">Nouveau restaurant</h5>
                               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
                             <form class="bb-form validate-form" action="http://localhost/FileRouge/FileRouge/Restaurant/save" method="post"> 
-                              <span class="bb-form-title p-b-26"> Welcome </span> <span class="bb-form-title p-b-48"> 
+                              <span class="bb-form-title p-b-26">Bienvenue</span> <span class="bb-form-title p-b-48"> 
                                 <i class="mdi mdi-symfony"></i> </span>
 
                                 <div class="mb-3">

@@ -33,11 +33,11 @@ class Commande
     public function getAll(){
         $cnx = new Connection;
         $idR=$_SESSION['id'];
-        $requette="SELECT plats.nom as'nomP',plats.image as'imageP',clients.nom as'nomC',clients.adresse,
+        $requette="SELECT plats.nom as'nomP',plats.prix as'prix',plats.image as'imageP',clients.nom as'nomC',clients.adresse,
         clients.telephone,clients.email,
         commande.total,commande.quantite ,commande.date as'dateC' 
         FROM `plats`,`clients`,`commande` WHERE plats.id=commande.idP 
-        and clients.id=commande.idC and plats.idR=$idR";
+        and clients.id=commande.idC and plats.idR=$idR ORDER BY dateC DESC";
         $query=$cnx->sql->query($requette);
         return $query->fetchAll();
     }

@@ -77,7 +77,7 @@ class Plats
 }
     public function bestseller(){
         $cnx = new Connection;
-        $requette="SELECT * FROM `plats` WHERE nmbrachat >=10 ORDER BY nmbrachat DESC";
+        $requette="SELECT * FROM `plats` WHERE nmbrachat >=21 ORDER BY nmbrachat DESC";
         $query=$cnx->sql->query($requette);
 		return $query;
     }

@@ -12,8 +12,14 @@ class CommandeController
 
 	function index()
 	{
+        $prix=array();
+        $prixCommande=0;
         $commande = new Commande;
         $commandes=$commande->getAll();
+        for($i=0;$i<count($commandes);$i++){
+            $prixCommande +=(float)($commandes[$i]['prix'])*(int)($commandes[$i]['quantite']);
+            array_push($prix, $prixCommande);
+        }
 
         require_once 'views/restaurant/NosCommande.php';
     }
@@ -43,4 +49,5 @@ class CommandeController
         header('location:http://localhost/FileRouge/FileRouge/Detail/deleteAll');
 
     }
+  
 }

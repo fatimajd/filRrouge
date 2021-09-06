@@ -40,6 +40,7 @@
                 </thead>
                 <tbody>
                 <?php 
+                $i=0;
 		foreach($commandes as $commande):?>
                   <tr>
                     
@@ -54,11 +55,11 @@
                     <td><?php echo $commande['telephone'] ;?></td>
                     <td><?php echo $commande['email'] ;?></td>
                     <td><?php echo $commande['dateC'] ;?></td>
-                    <td><?php echo $commande['total'] ;?></td>
+                    <td><?php echo $prix[$i] ?>DH</td>
                    
                     
                   </tr>
-                  <?php endforeach; ?>
+                  <?php $i++ ; endforeach; ?>
                 </tbody>
               </table>
         </div>

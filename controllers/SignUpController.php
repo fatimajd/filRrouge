@@ -21,7 +21,7 @@ class SignUpController
 		$obj->email = $_POST["email"];
 		$obj->motdepasse = $_POST["motdepasse"];
 		$obj->insert();
-		// header("location:http://localhost/brief5/matiere/index");
+		header('Location:http://localhost/FileRouge/FileRouge/Login/index');
 	}
 
 }

@@ -21,6 +21,7 @@ class PanierController
 		$total=$prix+10;
 		require_once 'views/user/Panier.php';
 	}
+
 	
 	
 }

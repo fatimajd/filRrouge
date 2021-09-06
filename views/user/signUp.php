@@ -47,29 +47,19 @@
                       <div id="side-menu" class="side-nav">
                         <a href="#" class="btn-close btn-close-white"></a>
                         <a href="http://localhost/FileRouge/FileRouge/" class="menu__link menu__link--active">Home
-                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 152.9 43.4" style="enable-background:new 0 0 152.9 43.4;" xml:space="preserve">
-                                <path d="M151.9,13.6c0,0,3.3-9.5-85-8.3c-97,1.3-58.3,29-58.3,29s9.7,8.1,69.7,8.1c68.3,0,69.3-23.1,69.3-23.1 s1.7-10.5-14.7-18.4"/>
-                              </svg>
+                         
                         </a>
-                        <a href="http://localhost/FileRouge/FileRouge/Gallery/index" class="menu__link">Gallery
-                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 152.9 43.4" style="enable-background:new 0 0 152.9 43.4;" xml:space="preserve">
-                                <path d="M151.9,13.6c0,0,3.3-9.5-85-8.3c-97,1.3-58.3,29-58.3,29s9.7,8.1,69.7,8.1c68.3,0,69.3-23.1,69.3-23.1 s1.7-10.5-14.7-18.4"/>
-                              </svg>
+                        <a href="http://localhost/FileRouge/FileRouge/Gallery/index" class="menu__link">Nos Plats
+                           
                         </a>
-                        <a href="http://localhost/FileRouge/FileRouge/about/index" class="menu__link">About Us
-                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 152.9 43.4" style="enable-background:new 0 0 152.9 43.4;" xml:space="preserve">
-                                <path d="M151.9,13.6c0,0,3.3-9.5-85-8.3c-97,1.3-58.3,29-58.3,29s9.7,8.1,69.7,8.1c68.3,0,69.3-23.1,69.3-23.1 s1.7-10.5-14.7-18.4"/>
-                              </svg>
+                        <a href="http://localhost/FileRouge/FileRouge/about/index" class="menu__link">About Nous
+                        
                         </a>
-                        <a href="#" class="menu__link">Order
-                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 152.9 43.4" style="enable-background:new 0 0 152.9 43.4;" xml:space="preserve">
-                                <path d="M151.9,13.6c0,0,3.3-9.5-85-8.3c-97,1.3-58.3,29-58.3,29s9.7,8.1,69.7,8.1c68.3,0,69.3-23.1,69.3-23.1 s1.7-10.5-14.7-18.4"/>
-                              </svg>
+                        <a href="http://localhost/FileRouge/FileRouge/Profile/index"  class="menu__link">Profile
+                            
                         </a>
                         <a href="http://localhost/FileRouge/FileRouge/Contact/index" class="menu__link">Contact
-                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 152.9 43.4" style="enable-background:new 0 0 152.9 43.4;" xml:space="preserve">
-                                <path d="M151.9,13.6c0,0,3.3-9.5-85-8.3c-97,1.3-58.3,29-58.3,29s9.7,8.1,69.7,8.1c68.3,0,69.3-23.1,69.3-23.1 s1.7-10.5-14.7-18.4"/>
-                              </svg>
+                           
                         </a>
                       </div>
                 </header>
@@ -96,30 +86,30 @@
 					<form class="bb-form validate-form" action="http://localhost/FileRouge/FileRouge/SignUp/save" method="post"> 
                         <span class="bb-form-title p-b-26">Bienvenue </span> <span class="bb-form-title p-b-48"> <i class="mdi mdi-symfony"></i> </span>
                     <div class="wrap-input100 validate-input" data-validate="Valid email is: a@b.c">
-                             <input  class="input100" type="text" name="nom"> 
-                             <span class="bbb-input" data-placeholder="Nom"></span> 
+                             <input  class="input100" type="text" placeholder="Nom"  name="nom"> 
+                             
                         </div>
                         <div class="wrap-input100 validate-input" data-validate="Valid email is: a@b.c">
-                             <input  class="input100" type="text" name="prenom"> 
-                             <span class="bbb-input" data-placeholder="prenom"></span> 
+                             <input  class="input100" type="text" placeholder="Prenom"  name="prenom"> 
+                             
                         </div>
                         <div class="wrap-input100 validate-input" data-validate="Valid email is: a@b.c">
-                             <input  class="input100" type="text" name="telephone"> 
-                             <span class="bbb-input" data-placeholder="Telephone"></span> 
+                             <input  class="input100" type="text" placeholder="Telephone"  name="telephone"> 
+                             
                         </div>
                         <div class="wrap-input100 validate-input" data-validate="Valid email is: a@b.c">
-                             <input  class="input100" type="text" name="adresse"> 
-                             <span class="bbb-input" data-placeholder="Adresse"></span> 
+                             <input  class="input100" type="text" placeholder="Adresse"  name="adresse"> 
+                         
                         </div>
                     <div class="wrap-input100 validate-input" data-validate="Valid email is: a@b.c">
-                             <input class="input100" type="email" name="email"> 
-                             <span class="bbb-input" data-placeholder="Email"></span> 
+                             <input class="input100" type="email" placeholder="Email"  name="email"> 
+                             
                         </div>
 						<div class="wrap-input100 validate-input" data-validate="Enter password"> 
-                            <span class="btn-show-pass"> <i class="mdi mdi-eye show_password"></i> 
+                            <span class="btn-show-pass"> 
                         </span> 
-                        <input class="input100" type="password" name="motdepasse"> 
-                        <span class="bbb-input" data-placeholder="Password"></span>
+                        <input class="input100" type="password" placeholder="Mot de passe"  name="motdepasse"> 
+                        
                      </div>
 						<div class="login-container-form-btn">
 							<div class="bb-login-form-btn">
